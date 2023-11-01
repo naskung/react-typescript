@@ -5,9 +5,12 @@ import { countSmileys } from './utils/countSmileys';
 
 
 const App: React.FC = () => {
-  const [permInput, setPermInput] = useState<string>("");
-  const [oddIntInput, setOddIntInput] = useState<string>("");
-  const [smileysInput, setSmileysInput] = useState<string>("");
+  const input = ['abc'];
+  const [permInput, setPermInput] = useState<string>(input.join(','));
+  const inputodd = ['1,2,2,3,3,3,4,3,3,3,2,2,1'];
+  const [oddIntInput, setOddIntInput] = useState<string>(inputodd.join(','));
+  const inputsmileys = [';D', ':-(', ':-)', ';~)'];
+  const [smileysInput, setSmileysInput] = useState<string>(inputsmileys.join(','));
 
   const [permutationsOutput, setPermutationsOutput] = useState<string[]>([]);
   const [oddIntOutput, setOddIntOutput] = useState<number | null>(null);
